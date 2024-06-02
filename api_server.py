@@ -5,6 +5,16 @@ from aiohttp import web
 import asyncio
 
 async def handle(request):
+    """
+    Handles the incoming request asynchronously.
+
+    Args:
+        request: The incoming request object.
+
+    Returns:
+        A JSON response with a message.
+
+    """
     await asyncio.sleep(2) # Simula un delay de 2 segundos
     return web.json_response({"message": "Hola desde el servidor API"})
 
